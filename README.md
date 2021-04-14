@@ -1,2 +1,2 @@
-# WithMyPet
- pet
+# With My Pet
+Spring mvc project
