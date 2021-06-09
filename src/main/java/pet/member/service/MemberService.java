@@ -5,43 +5,41 @@ import pet.member.vo.MemberVO;
 
 public interface MemberService {
 
-   //ȸ�� ����
+   //회원가입
    public void join(MemberVO vo) throws Exception;
    
-   //�̸��� �ߺ�üũ
+   //중복체크
    public int mailChk(String email) throws Exception;
    
-   //�α���
+   //로그인
    public MemberVO login(MemberVO lvo);
    
-   //���������� �������� Ȯ��
+   //마이페이지
    public MemberVO mypage(int vo);
    
-   //�ȷο� ���������� ����Ȯ�� ����
+   //팔로우
    public MemberVO followmypage(int lvo);
    
-   //ȸ������ ����(�ƴ�)
+   //정보수정
    public void memberUpdateDo(MemberVO vo) throws Exception;
    
-   //�̸��� ã��
+   //아이디 찾기
    public MemberVO getEmailSearch(String address, String name) throws Exception;
    
-   //�̸��Ϲ߼�
+   //메일 보내기 (임시비밀번호)
    public void sendEmail(MemberVO vo) throws Exception;
 
-   //��й�ȣã��
+   //비밀번호 찾기
    public String getpwSearch(String email) throws Exception;
    
-   //�н����� ����
+   //비밀번호 수정
    public void pwModify(MemberVO vo) throws Exception;
    
-   // ȸ������ ��ü ����
+   // 내정보 수정
    public void memberModify(MemberVO vo) throws Exception;
    
-   // �α��� ��� ����� 
    public void loginLog(long member_number);
    
-   // �α��� �α� ����
    public void makeLoginLog(long member_number, String member_name);
    
    public long checkLoginLog(long member_number);
